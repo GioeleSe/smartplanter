@@ -1,12 +1,28 @@
-# React + Vite
+# Smart Planter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Smart Planter** is a minimalist web app for monitoring **IoT-connected plants** using smart microcontrollers.  
 
-Currently, two official plugins are available:
+The app focuses on displaying only the **essential plant data** through a clean, distraction-free interface.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Currently, the app does **not** support multi-user management.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+- Monitor IoT-connected plants in real time  
+- Minimalist web interface for quick data visualization  
+- Built with **React** using plain JavaScript components 
+- Uses **hardcoded data** (no real APIs are connected yet) 
+---
+
+## Project Goals
+The project was designed primarily as a **learning exercise**:  
+- To expand knowledge in **React**  
+- To focus on **core concepts** without advanced abstractions  
+- To practice building **clean, functional UIs**  
+- To simulate data handling without relying on real APIs  
+---
+
+## Tech Stack
+- **Frontend:** React (JavaScript)  
+- **IoT Integration:** Smart Microcontrollers  
