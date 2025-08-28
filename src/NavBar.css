@@ -1,0 +1,23 @@
+nav{
+    width: 90vw;
+    height: 20vh;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border: 0;
+    padding: 0.5rem;
+}
+
+nav p{
+    font-size: 6rem;
+    color: #365b6d;
+}
+
+nav .subtitle{
+    position: absolute;
+    font-size: 2rem;
+    top: 7.5rem;
+    left: 1rem;
+}

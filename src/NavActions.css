@@ -1,0 +1,214 @@
+.nav-btn-container {
+    display: inline-flex;
+    width: 30%;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.nav-btn {
+    display: inline-flex;
+    width: 50%;
+    position: relative;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    font-size: 2rem;
+    border-radius: 5rem;
+    border-width: 0;
+    gap: 0.7rem;
+    background-color: #365b6d;
+}
+
+.button-text {
+    display: inline-flex;
+    align-self: center;
+}
+
+.dots-container {
+    display: inline-flex;
+    margin-left: 1rem;
+    border: 0;
+    align-self: center;
+    gap: 0.3rem;
+}
+
+.dots {
+    display: inline-flex;
+    width: .3125em;
+    height: .3125em;
+    background: white;
+    border-radius: 100%;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+.menu-btn:hover .dots-container .dots {
+    animation: bounce 0.3s ease-in-out;
+}
+
+.btn:hover .dots-container .dots:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.btn:hover .dots-container .dots:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.admin-btn button {
+    background-color: #9c5e40;
+    width: 75%;
+}
+
+.admin-btn .button-text {
+    transform: translateX(1rem);
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrow-container {
+    display: inline-flex;
+    justify-content: space-around;
+    margin-left: 0.5rem;
+    border: 0;
+    gap: 0.3rem;
+}
+
+.arrow {
+    display: inline-block;
+    width: 2.2rem;
+    filter: invert(100%);
+    transform: translateX(-12rem);
+    transition: transform 0.1s ease-in-out;
+}
+
+@keyframes slideArrow {
+    0% {
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        transform: translateX(-6rem);
+    }
+}
+
+@keyframes slideText {
+    0% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        transform: translateX(3.5rem);
+    }
+}
+
+.admin-btn button:hover .button-text {
+    animation: slideText 0.4s ease-in-out forwards;
+}
+
+.admin-btn button:hover .arrow {
+    animation: slideArrow 0.4s ease-in-out forwards;
+}
+
+.menu-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.vertical-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(66, 70, 73, 0.95);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.vertical-menu-leaving-region {
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+}
+
+.vertical-menu-entry-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.vertical-menu-link {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: inherit;
+    margin: 1rem;
+    text-decoration: none;
+    transition: color 0.4s ease-in
+}
+
+.vertical-menu-entry {
+    display: inline-flex;
+    padding: 1rem 1rem;
+    font-size: 2.5rem;
+    width: max-content;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    color: #9c5e40;
+}
+.vertical-menu-open {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 10;
+}
+.vertical-menu-closed {
+    opacity: 0;
+    z-index: -10;
+}
+
+.vertical-menu-entry:hover {
+    transform: scale(1.1);
+    color: #f2f1ec;
+}
+
+.vertical-menu-close-btn{
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+}
+.vertical-menu-close-icon{
+    width: 20%;
+    filter: invert(100%);
+    transition: filter 0.4s ease;
+}
+.vertical-menu-close-icon:hover{
+    filter: invert(50%);
+}

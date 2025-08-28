@@ -1,0 +1,120 @@
+.smartplant-details-container {
+    margin: 2rem auto;
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+.visible{
+    opacity: 1;
+}
+
+.loading-animation-container{
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 80vw;
+    height: 20vh;
+    left: 10vw;
+    top: 40vh;
+    scale: 1.5;
+}
+
+.health-score-box{
+    display: flex;
+    position: absolute;
+    top: -12vh;
+    right: 5vw;
+    font-size: 3rem;
+    width: max-content;
+    gap: 2rem;
+}
+
+.plant-img{
+    display: flex;
+    position: absolute;
+    width: 15vw;
+    left: 25rem;
+    top: 0;
+}
+
+.sun-img{
+    position: absolute;
+    width: 10vw;
+    right: 32vw;
+    bottom: 55vh;
+}
+
+
+.waterTank-img{
+    position: absolute;
+    width: 15vw;
+    right: 8rem;
+    bottom: 15vh;
+}
+
+.plant-data-container{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    width: 15rem;
+    height: 4rem;
+    background-color: #9c5e40;
+    color: #f2f1ec;
+    border-radius: 3rem;
+    padding: 1rem;
+}
+
+.air-data{
+    background-color: #86b0c5;
+}
+
+.plant-data-text{
+    align-content: center;
+    font-size: 1.3rem;
+}
+
+.plant-data-value{
+    align-content: center;
+    font-size: 1.1rem;
+}
+
+.atmospheric-conditions-data.sun-exposure{
+    background-color: #e9c843;
+    right: 14rem;
+    bottom: 62vh;
+}
+
+.atmospheric-conditions-data.tank-water-level{
+    background-color: #b9b9b9;
+    right: 10rem;
+    bottom: 48vh;
+}
+
+.atmospheric-conditions-data.air-temp{
+    left: 6rem;
+    bottom: 56vh;
+}
+
+.atmospheric-conditions-data.air-hum{
+    left: 10rem;
+    bottom: 44vh;
+}
+
+.atmospheric-conditions-data.soil-temp{
+    left: 10rem;
+    bottom: 26vh;
+}
+
+.atmospheric-conditions-data.soil-hum{
+    left: 41rem;
+    bottom: 26vh;
+}

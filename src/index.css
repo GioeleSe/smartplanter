@@ -1,0 +1,10 @@
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  background: #f2f1ec;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
