@@ -1,81 +1,110 @@
-.plantcards-container {
-    margin: 0 auto;
+.smartplants-body-container {
     width: 80vw;
-    height: 55vh;
+    height: 50vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.plantcards-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-evenly;
+    gap: 5vh;
     overflow: hidden;
+    position: relative;
 }
 
-.plantcard-container {
-    display: inherit;
-    width: 45%;
-    height: 25%;
-    background-color: #365b6d;
-    color: #f2f1ec;
-    border-radius: 1.5rem;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: space-around;
+.carousel-buttons-container{
+    position: absolute;
+    top: 3vh;
+    height: 3rem;
+    right: 31vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+    height: 7vh;
+    margin: 1vh auto;
 }
 
-.plantcard-container-field {
-    font-size: 1.8rem;
-    position: relative;
-}
-
-.plantcard-healthscore-container {
-    width: 20%;
-    top: 15%;
-    position: relative;
-}
-
-.plantcard-name-container {
+.carousel-speed-slider{
+    display: flex;
     width: 40%;
+    padding: 1.5% 4%;
+    border-radius: 1.5rem;
 }
 
-.plantcard-icon-container {
-    width: 20%;
+.css-yg0zaj-MuiSlider-root {
+    color: var(--beige-dark)!important;
 }
 
-.plantcard-healthscore-slider-icon {
-    position: absolute;
-    top: -3.2rem;
-    left: calc((var(--health) * 1%) - 30%);
-    transform: scale(0.4);
+.carousel-playpause-button{
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    font-size: 2rem;
+    padding: 1.7rem;
+    border-radius: 5rem;
+    background-color: var(--beige-dark);
+    color: var(--beige-light);
 }
 
-.plantcard-healthscore-slider-selecticon {
-    opacity: 0;
-    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
-    transform: scale(0.4);
+.carousel-button-icon {
+    width: 13%;
+    filter: invert(50%);
 }
 
-.healthscore-description {
-    position: absolute;
-    top: 170%;
-    font-size: 2.5rem;
-    transition: font-size 0.3s ease-in;
+.carousel {
+    overflow: hidden;
+    height: 100%;
 }
 
-.loadedVisible {
-    opacity: 1;
+.plantcards-container.carousel {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.plantcard-container:hover .plantcard-healthscore-slider-selecticon,
-.plantcard-healthscore-slider-selecticon.loadedVisible {
-    transform: scale(0.8);
-    opacity: 1;
+.plantcard-memo-container {
+    background: var(--blue-dark);
+    color: var(--beige-light);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem auto;
 }
 
-.plantcard-container:hover .healthscore-description {
-    font-size: 3rem;
+.carousel-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    animation: carouselScroll var(--carousel-duration) linear infinite;
+    animation-play-state: running;
+    transition: transform 0.8s linear;
 }
 
-.plantcard-details-link-icon {
-    width: 60%;
+.carousel-track.paused {
+    animation-play-state: running;
+}
+
+.carousel-track.running {
+    animation-play-state: paused;
+}
+
+@keyframes carouselScroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
 }

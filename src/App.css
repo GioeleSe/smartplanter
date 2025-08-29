@@ -1,3 +1,5 @@
+
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -5,4 +7,9 @@
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
+
+  --beige-light: #f2f1ec;
+  --beige-dark: #c4bfb1;
+  --brown-dark: #9c5e40;
+  --blue-dark: #365b6d;
 }

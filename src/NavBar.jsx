@@ -5,7 +5,8 @@ import './NavBar.css'
 
 function NavBar() {
   const pageLocation = useLocation();
-  const plantsData = usePlantData()[0];
+  const plantTypes = usePlantData()[0];
+  const plantsData = usePlantData()[1];
   let title = "Smart Planter";
   let subtitle = "";
   if (pageLocation.pathname === "/smartplants") {
@@ -17,9 +18,10 @@ function NavBar() {
     if(plantId){
       try {
         const plant = plantsData.find((p) => p.id === Number(plantId));
+        const plantType = plantTypes.find((p) => p.id === Number(plant.plantId)).plantName;
         if(plant){
           title = plant.userName;
-          subtitle = plant.realName;
+          subtitle = plantType;
         }
       } catch (error) {
         console.warn(error);

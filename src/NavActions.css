@@ -1,8 +1,12 @@
 .nav-btn-container {
-    display: inline-flex;
     width: 30%;
     height: 3rem;
-    margin-top: 1rem;
+    position: absolute;
+    right: 2vw;
+    top: 3vh;
+    display: inline-flex;
+    align-items: center;
+    gap: 5%;
 }
 
 .nav-btn {
@@ -12,6 +16,8 @@
 }
 
 .btn {
+    width: 120%;
+    height: 100%;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
@@ -20,7 +26,7 @@
     border-radius: 5rem;
     border-width: 0;
     gap: 0.7rem;
-    background-color: #365b6d;
+    background-color: var(--blue-dark);
 }
 
 .button-text {
@@ -40,7 +46,7 @@
     display: inline-flex;
     width: .3125em;
     height: .3125em;
-    background: white;
+    background: var(--beige-light);
     border-radius: 100%;
 }
 
@@ -68,8 +74,17 @@
     animation-delay: 0.2s;
 }
 
+.admin-btn{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    font-size: 2rem;
+}
+
 .admin-btn button {
-    background-color: #9c5e40;
+    margin: 0 auto;
+    background-color: var(--brown-dark);
     width: 75%;
 }
 
@@ -180,7 +195,7 @@
     width: max-content;
     cursor: pointer;
     transition: transform 0.4s ease-in-out;
-    color: #9c5e40;
+    color: var(--brown-dark);
 }
 .vertical-menu-open {
     opacity: 1;
@@ -194,7 +209,7 @@
 
 .vertical-menu-entry:hover {
     transform: scale(1.1);
-    color: #f2f1ec;
+    color: var(--beige-light);
 }
 
 .vertical-menu-close-btn{

@@ -7,17 +7,17 @@ import SmartPlants from './smartPlants/SmartPlants.jsx';
 import PlantDetails from './smartPlants/PlantDetails.jsx';
 import AboutSmartplanter from './aboutSmartplanter/AboutSmartplanter.jsx';
 import AboutSIndustry from './aboutSIndustry/AboutSIndustry.jsx';
-import { plantsData, suggestedPlantsConditions } from './hardcodedAPI.js';
+import { registeredPlantTypes, plantsData, suggestedPlantsConditions } from './hardcodedAPI.js';
 import './App.css';
 
 function App() {
   return (
-    <PlantDataContext.Provider value={[plantsData, suggestedPlantsConditions]}>
+    <PlantDataContext.Provider value={[registeredPlantTypes, plantsData, suggestedPlantsConditions]}>
       <NavBar />
       <Routes>
         <Route path="/" element={<LandingAnimation />} />
         <Route path="/smartplants" element={<SmartPlants/>} />
-        <Route path="/smartplants/:plantId" element={<PlantDetails />} />
+        <Route path="/smartplants/:plantDataId" element={<PlantDetails />} />
         <Route path="/about-smartplanter" element={<AboutSmartplanter />} />
         <Route path="/about-sindustry" element={<AboutSIndustry />} />
       </Routes>

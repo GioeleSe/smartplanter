@@ -10,14 +10,15 @@ import './PlantDetails.css'
 
 function PlantDetails() {
     const loaderTimeout = 3000;
-    const plantsData = usePlantData()[0];
-    const plantsSuggestions = usePlantData()[1];
-    const { plantId } = useParams();
+    const plantTypes = usePlantData()[0];
+    const plantsData = usePlantData()[1];
+    const plantsSuggestions = usePlantData()[2];
+    const { plantDataId } = useParams();
     let plantData;
     let plantSuggestions;
-    if (plantId) {
+    if (plantDataId) {
         try {
-            const plant = plantsData.find((p) => p.id === Number(plantId));
+            const plant = plantsData.find((p) => p.id === Number(plantDataId));
             if (plant) {
                 plantData = plant;
             }
@@ -25,7 +26,7 @@ function PlantDetails() {
             console.warn(error);
         }
         if (plantData) {
-            plantSuggestions = plantsSuggestions.find((p) => p.plantName === plantData.realName);
+            plantSuggestions = plantsSuggestions.find((p) => p.plantId === Number(plantData.plantId));
         }
     }
     const UnitType = {
@@ -53,6 +54,9 @@ function PlantDetails() {
         }, loaderTimeout);
         return () => clearTimeout(loadingTimeout);
     }, []);
+
+    //  add suggestions on hover
+    // {plantSuggestions.air.hum.max}
 
     return (
         <>

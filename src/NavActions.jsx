@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import arrowIcon from './assets/icons/arrowRight.png'
 import closeMenuIcon from './assets/icons/x.png'
 
@@ -12,12 +12,14 @@ function NavActions() {
             ()=>{setMenuOpen((_) => false)}
         , 100)
     }
+    const location = useLocation();
+
     return (
         <div className='nav-btn-container'>
             <div className='nav-btn'>
                 <div className='menu-wrapper'>
-                    <button className='menu-btn btn btn-dark p-2 px-4' onClick={()=>setTimeout(()=>{setMenuOpen((prev) => !prev)}, 300)}>
-                        <div className="button-text barlow-extrabold h3 m-0">Menu</div>
+                    <button className='menu-btn btn btn-dark' onClick={()=>setTimeout(()=>{setMenuOpen((prev) => !prev)}, 300)}>
+                        <div className="button-text barlow-regular">Menu</div>
                         <div className='dots-container'>
                             <span className='dots'></span>
                             <span className='dots'></span>
@@ -61,9 +63,9 @@ function NavActions() {
                 </div>
             </div>
 
-            <div className='nav-btn admin-btn'>
-                <button className='btn btn-dark  p-2 px-4'>
-                    <div className="button-text barlow-extrabold h3 m-0">
+            <div className='nav-btn  admin-btn'>
+                <button className='btn btn-dark'>
+                    <div className="button-text barlow-regular">
                         Admin
                     </div>
                     <span className='arrow-container'>
