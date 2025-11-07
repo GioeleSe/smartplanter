@@ -1,11 +1,10 @@
 import './LandingAnimation.css';
-
+import landingImage from '../assets/landingImage.jpg'
 function LandingAnimation() {
 
   return (
-    <div className='animation-container'>
-      <div className='animation-box'>
-      </div>
+    <div className='landing-container'>
+        <img src={landingImage} alt="" className='landingImage' />
     </div>
     
   );

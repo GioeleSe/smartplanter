@@ -111,21 +111,21 @@
 
 @keyframes slideArrow {
     0% {
-        transform: translateX(-10rem);
+        transform: translateX(-1000%);
     }
 
     100% {
-        transform: translateX(-6rem);
+        transform: translateX(-320%);
     }
 }
 
 @keyframes slideText {
     0% {
-        transform: translateX(1rem);
+        transform: translateX(10%);
     }
 
     100% {
-        transform: translateX(3.5rem);
+        transform: translateX(50%);
     }
 }
 

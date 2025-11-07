@@ -16,6 +16,10 @@ export const suggestedPlantsConditions = [
     air: {
       temp: { min: 10, max: 35 },
       hum: { min: 15, max: 65 }
+    },
+    sun:{
+      min:15,
+      max:60
     }
   },
   {
@@ -27,6 +31,10 @@ export const suggestedPlantsConditions = [
     air: {
       temp: { min: 15, max: 35 },
       hum: { min: 20, max: 50 }
+    },
+    sun:{
+      min:15,
+      max:60
     }
   },
   {
@@ -38,6 +46,10 @@ export const suggestedPlantsConditions = [
     air: {
       temp: { min: 16, max: 30 },
       hum: { min: 30, max: 60 }
+    },
+    sun:{
+      min:15,
+      max:60
     }
   },
   {
@@ -49,6 +61,10 @@ export const suggestedPlantsConditions = [
     air: {
       temp: { min: 10, max: 35 },
       hum: { min: 20, max: 60 }
+    },
+    sun:{
+      min:15,
+      max:60
     }
   },
   {
@@ -60,6 +76,10 @@ export const suggestedPlantsConditions = [
     air: {
       temp: { min: 18, max: 32 },
       hum: { min: 40, max: 70 }
+    },
+    sun:{
+      min:15,
+      max:60
     }
   },
   {
@@ -71,6 +91,10 @@ export const suggestedPlantsConditions = [
     air: {
       temp: { min: 16, max: 30 },
       hum: { min: 40, max: 60 }
+    },
+    sun:{
+      min:15,
+      max:60
     }
   }
 ];

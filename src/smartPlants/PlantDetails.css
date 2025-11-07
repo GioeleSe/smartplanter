@@ -87,6 +87,24 @@
     font-size: 1.1rem;
 }
 
+.suggestionsBox{
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    width: 70%;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background-color: var(--blue-dark);
+    font-size:40%;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.1s ease-in-out;
+}
+.suggestionsBox.show{
+    opacity: 1;
+    visibility: visible;
+}
+
 .atmospheric-conditions-data.sun-exposure{
     background-color: #e9c843;
     right: 14rem;

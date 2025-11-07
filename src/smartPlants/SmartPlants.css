@@ -8,66 +8,14 @@
 .plantcards-container {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;
-    gap: 5vh;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: calc((100% - (1.5rem * 2)) / 3); 
+    gap: 1.5rem;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     position: relative;
-}
-
-.carousel-buttons-container{
-    position: absolute;
-    top: 3vh;
-    height: 3rem;
-    right: 31vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 30vw;
-    height: 7vh;
-    margin: 1vh auto;
-}
-
-.carousel-speed-slider{
-    display: flex;
-    width: 40%;
-    padding: 1.5% 4%;
-    border-radius: 1.5rem;
-}
-
-.css-yg0zaj-MuiSlider-root {
-    color: var(--beige-dark)!important;
-}
-
-.carousel-playpause-button{
-    display: flex;
-    width: 35%;
-    justify-content: space-around;
-    font-size: 2rem;
-    padding: 1.7rem;
-    border-radius: 5rem;
-    background-color: var(--beige-dark);
-    color: var(--beige-light);
-}
-
-.carousel-button-icon {
-    width: 13%;
-    filter: invert(50%);
-}
-
-.carousel {
-    overflow: hidden;
-    height: 100%;
-}
-
-.plantcards-container.carousel {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 .plantcard-memo-container {
@@ -80,31 +28,4 @@
     width: 100%;
     margin: 1rem auto;
     padding: 1rem auto;
-}
-
-.carousel-track {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    animation: carouselScroll var(--carousel-duration) linear infinite;
-    animation-play-state: running;
-    transition: transform 0.8s linear;
-}
-
-.carousel-track.paused {
-    animation-play-state: running;
-}
-
-.carousel-track.running {
-    animation-play-state: paused;
-}
-
-@keyframes carouselScroll {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-50%);
-    }
 }

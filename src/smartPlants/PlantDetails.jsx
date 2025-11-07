@@ -27,6 +27,7 @@ function PlantDetails() {
         }
         if (plantData) {
             plantSuggestions = plantsSuggestions.find((p) => p.plantId === Number(plantData.plantId));
+            console.log("plantSuggestions: " + JSON.stringify(plantSuggestions));
         }
     }
     const UnitType = {
@@ -34,29 +35,37 @@ function PlantDetails() {
         DEGREE: "°",
         PURENUM: ""
     }
-    const DataContainer = ({ text, value, unit = UnitType.PURENUM, classNames }) => {
+    const DataContainer = ({ text, value, unit = UnitType.PURENUM, classNames, valueSuggestions }) => {
+        const [showSuggestions, setShowSuggestions] = useState(true);
+            setTimeout(()=>{ setShowSuggestions(false); }, (loaderTimeout));
         return (
-            <div className={"plant-data-container " + classNames}>
-                <div className="barlow-light plant-data-text">
-                    {text}
+            <>
+                <div className={"plant-data-container " + classNames}
+                    onMouseEnter={() => setShowSuggestions(true) }
+                    onMouseLeave={() => setShowSuggestions(false) }>
+                    <div className={"barlow-light suggestionsBox " + ((showSuggestions&&(valueSuggestions!=null))?" show ":"")}>
+                        {valueSuggestions!=null?("from "+ valueSuggestions.min+" to "+valueSuggestions.max):""}
+                    </div>
+                    <div className="barlow-light plant-data-text">
+                        {text}
+                    </div>
+                    <div className="barlow-semibold plant-data-value">
+                        {value + unit}
+                    </div>
                 </div>
-                <div className="barlow-semibold plant-data-value">
-                    {value + unit}
-                </div>
-            </div>
+            </>
         );
     };
-
+    
     const [showLoading, setShowLoading] = useState(true);
     useEffect(()=>{
         const loadingTimeout = setTimeout(()=>{
             setShowLoading(false);
         }, loaderTimeout);
-        return () => clearTimeout(loadingTimeout);
+        return () => {
+            clearTimeout(loadingTimeout);
+        };
     }, []);
-
-    //  add suggestions on hover
-    // {plantSuggestions.air.hum.max}
 
     return (
         <>
@@ -76,34 +85,40 @@ function PlantDetails() {
                 text="Sun exposure"
                 value={plantData.sunExposure}
                 classNames={"atmospheric-conditions-data sun-exposure"}
+                valueSuggestions={plantSuggestions?plantSuggestions.sun:null}
             /><DataContainer
                 text="Air temperature"
                 value={plantData.air.temp}
                 unit={UnitType.DEGREE}
                 classNames={"atmospheric-conditions-data air-data air-temp"}
+                valueSuggestions={plantSuggestions?plantSuggestions.air.temp:null}
             /><DataContainer
                 text="Air humidity"
                 value={plantData.air.hum}
                 unit={UnitType.PERCENTAGE}
                 classNames={"atmospheric-conditions-data air-data air-hum"}
+                valueSuggestions={plantSuggestions?plantSuggestions.air.hum:null}
             />
             <DataContainer
                 text="Soil temperature"
                 value={plantData.air.hum}
                 unit={UnitType.DEGREE}
                 classNames={"atmospheric-conditions-data soil-temp"}
+                valueSuggestions={plantSuggestions?plantSuggestions.soil.temp:null}
             />
             <DataContainer
                 text="Soil humidity"
                 value={plantData.air.hum}
                 unit={UnitType.PERCENTAGE}
                 classNames={"atmospheric-conditions-data soil-hum"}
+                valueSuggestions={plantSuggestions?plantSuggestions.soil.hum:null}
             />
             <DataContainer
                 text="Water level"
                 value={plantData.air.hum}
                 unit={UnitType.PERCENTAGE}
                 classNames={"atmospheric-conditions-data tank-water-level"}
+                valueSuggestions={{min:15, max:100}}
             />
             <div className="plant-img-container">
                 <img src={plantVase} alt="" className="plant-img" />
