@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from '@mui/material/Slider';
-import happinessScale from '../assets/icons/happinessScale.png';
-import plantVaseIcon from '../assets/icons/plantVaseIcon.png';
+import happinessScale from 'assets/icons/happinessScale.png';
+import plantVaseIcon from 'assets/icons/plantVaseIcon.png';
 import './PlantCard.css';
 
 export function PlantCard({ plantDataId, username, healthScore, classNames }) {

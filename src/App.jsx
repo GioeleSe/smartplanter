@@ -1,13 +1,13 @@
 import { PlantDataContext } from "./PlantContext.jsx";
 import { Routes, Route } from "react-router-dom";
-import NavBar from './NavBar';
-import Footer from './Footer';
-import LandingAnimation from './landingPage/LandingAnimation.jsx';
-import SmartPlants from './smartPlants/SmartPlants.jsx';
-import PlantDetails from './smartPlants/PlantDetails.jsx';
-import AboutSmartplanter from './aboutSmartplanter/AboutSmartplanter.jsx';
-import AboutSIndustry from './aboutSIndustry/AboutSIndustry.jsx';
-import { registeredPlantTypes, plantsData, suggestedPlantsConditions } from './hardcodedAPI.js';
+import NavBar from 'components/navbar/NavBar';
+import Footer from 'components/footer/Footer';
+import LandingAnimation from 'pages/landingPage/LandingAnimation.jsx';
+import SmartPlants from 'pages/smartPlants/SmartPlants.jsx';
+import PlantDetails from 'pages/smartPlants/PlantDetails.jsx';
+import AboutSmartplanter from 'pages/aboutSmartplanter/AboutSmartplanter.jsx';
+import AboutSIndustry from 'pages/aboutSIndustry/AboutSIndustry.jsx';
+import { registeredPlantTypes, plantsData, suggestedPlantsConditions } from 'src/hardcodedAPI.js';
 import './App.css';
 
 function App() {

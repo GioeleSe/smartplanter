@@ -1,9 +1,9 @@
-import github from './assets/github.png'
-import linkedin from './assets/linkedin.png'
-import upwork from './assets/upwork.png'
-import telegram from './assets/telegram.png'
-import stackoverflow from './assets/stackoverflow.png'
-import portfolio from  './assets/portfolio.png'
+import github from 'assets/github.png'
+import linkedin from 'assets/linkedin.png'
+import upwork from 'assets/upwork.png'
+import telegram from 'assets/telegram.png'
+import stackoverflow from 'assets/stackoverflow.png'
+import portfolio from 'assets/portfolio.png'
 import './Footer.css'
 
 const contactIconsData = [

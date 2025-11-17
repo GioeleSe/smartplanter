@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import arrowIcon from './assets/icons/arrowRight.png'
-import closeMenuIcon from './assets/icons/x.png'
+import arrowIcon from 'assets/icons/arrowRight.png'
+import closeMenuIcon from 'assets/icons/x.png'
 
 import './NavActions.css'
 

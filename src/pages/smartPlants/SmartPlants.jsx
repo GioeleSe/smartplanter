@@ -1,5 +1,5 @@
-import { usePlantData } from "../PlantContext.jsx";
-import { MemoPlantCard } from './PlantCard';
+import { usePlantData } from "src/PlantContext.jsx";
+import { MemoPlantCard } from './PlantCard.jsx';
 
 import './SmartPlants.css';
 

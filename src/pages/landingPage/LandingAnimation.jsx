@@ -1,5 +1,5 @@
 import './LandingAnimation.css';
-import landingImage from '../assets/landingImage.jpg'
+import landingImage from 'assets/landingImage.jpg'
 function LandingAnimation() {
 
   return (

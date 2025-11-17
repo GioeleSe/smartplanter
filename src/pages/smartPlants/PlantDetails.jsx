@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { usePlantData } from "../PlantContext.jsx";
-import { suggestedPlantsConditions } from '../hardcodedAPI.js';
-import { LoadingAnimation } from "../loadingAnimation.jsx"; 
-import plantVase from '../assets/plantVase.png';
-import sunDraw from '../assets/sunDraw.png';
-import waterTank from '../assets/waterTank.png';
+import { usePlantData } from "src/PlantContext.jsx";
+import { suggestedPlantsConditions } from 'src/hardcodedAPI.js';
+import { LoadingAnimation } from "components/loadingAnimation/loadingAnimation.jsx"; 
+import plantVase from 'assets/plantVase.png';
+import sunDraw from 'assets/sunDraw.png';
+import waterTank from 'assets/waterTank.png';
 import './PlantDetails.css'
 
 function PlantDetails() {

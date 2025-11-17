@@ -1,4 +1,4 @@
-import { usePlantData } from "./PlantContext.jsx";
+import { usePlantData } from "src/PlantContext.jsx";
 import { useLocation } from 'react-router-dom';
 import NavActions from './NavActions.jsx'
 import './NavBar.css'
